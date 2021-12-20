@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Sora', sans-serif;
+}
+
+.total{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+}
+
+#start{
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    border: 1px solid white;
+    width: 20vw;
+    color: white;
+    height: 13vh;
+}
+
+#s{
+   
+    font-size: 3em;
+}
+
+#start:hover{
+    background-color: rgb(199, 53, 53);
+}
+
+#road{
+    height: 100vh;
+    background-color: black;
+}
+
+#line{
+    width: 1em;
+    height: 5em;
+    position: absolute;
+    background-color: white;
+    left: 50%;
+}
+
+.user{
+    background-image: url("./images/yellow.svg");
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    position: absolute;
+    bottom: 10%;
+    left: 38%;
+    height: 6.5em;
+    width: 3em;
+}
+
+.other{
+    background-image: url("./images/red.svg");
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    height: 6em;
+    width: 3em;
+}
+
+.other1{
+    background-image: url("./images/red.svg");
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    height: 6em;
+    width: 3em;
+}
+
+.other2{
+    background-image: url("./images/red.svg");
+    background-repeat: no-repeat;
+    background-size: 5vh;
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    height: 6em;
+    width: 3em;
+}
+
+#left{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: green;
+}
+
+#right{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: green;
+}
+
+
+#trees{
+    /* top: 30%; */
+    /* height: 33vh; */
+    background-image: url("./images/tree1.svg");
+    background-repeat: no-repeat;
+    background-size: 30vh;
+    height: 40vh;
+    width: 16em;
+    position: absolute;
+}
+
+#lane2{
+    background-image: url("./images/tree3.svg");
+    background-repeat: no-repeat;
+    background-size: 30vh;
+    height: 40vh;
+    width: 16em;
+    position: absolute; 
+}
+
+#lane4{
+    background-image: url("./images/tree1.svg");
+    background-repeat: no-repeat;
+    background-size: 30vh;
+    height: 40vh;
+    width: 16em;
+    position: absolute;
+}
+
+#lane3{
+    background-image: url("./images/tree3.svg");
+    background-repeat: no-repeat;
+    background-size: 30vh;
+    height: 40vh;
+    width: 16em;
+    position: absolute; 
+}
+
+.score{
+    position: absolute;
+    height: 20vh;
+    width: 30vw;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 2em;
+    top: 10%;
+    left: 5%;
+    z-index: 1;
+}
+
+p{
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+    margin-top: 10%;
+}
+
+.speed{
+    position: absolute;
+    height: 20vh;
+    width: 30vw;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 2em;
+    top: 10%;
+    right: 5%;
+    z-index: 1;
+    align-items: center;
+}
+
+#btn{
+    height: 10vh;
+    right: 18%;
+    top: 35%;
+    position: absolute;
+}
+
+#ins{
+    position: absolute;
+    top: 38%;
+    color: white;
+    left: 20%;
+    border: 1px solid white;
+    padding-left: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    width: 60vw;
+}
+
+#ins>ul{
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+@media only screen and (max-width: 1600px) {
+    
+#trees{
+    /* top: 30%; */
+    /* height: 33vh; */
+    background-image: url("./images/tree1.svg");
+    background-repeat: no-repeat;
+    background-size: 10vh;
+    height: 13vh;
+    width: 5em;
+    position: absolute;
+}
+
+#lane2{
+    background-image: url("./images/tree3.svg");
+    background-repeat: no-repeat;
+    background-size: 10vh;
+    height: 13vh;
+    width: 5em;
+    position: absolute;
+}
+
+#lane4{
+    background-image: url("./images/tree1.svg");
+    background-repeat: no-repeat;
+    background-size: 10vh;
+    height: 13vh;
+    width: 5em;
+    position: absolute;
+}
+
+#lane3{
+    background-image: url("./images/tree3.svg");
+    background-repeat: no-repeat;
+    background-size: 10vh;
+    height: 13vh;
+    width: 5em;
+    position: absolute;
+  }
+
+  .user{
+    background-image: url("./images/yellow.svg");
+    background-repeat: no-repeat;
+    background-size: 3vh;
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    height: 2em;
+    width: 1em;
+}
+
+.other,.other1,.other2{
+    background-image: url("./images/red.svg");
+    background-repeat: no-repeat;
+    background-size: 3vh;
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    height: 2em;
+    width: 1em;
+}
+
+p{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    margin-top: 10%;
+}
+
+#s{
+    font-size: 1.5em;
+}
+
+#ins>ul{
+    font-size: 1em;
+    line-height: 1em;
+}
+
+#ins{
+    padding-left: 4%;
+}
+}
