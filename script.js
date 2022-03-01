@@ -16,6 +16,14 @@ window.onload  = function(){
     });
 }
 
+function getRandomInt(min, max) {
+var byteArray = new Uint8Array(1);
+window.crypto.getRandomValues(byteArray);
+var randomNum = '0.' + byteArray[0].toString();
+randomNum = Math.floor(randomNum * (max - min + 1)) + min;
+return randomNum;
+}
+
 function complete()
 {
     const rd=document.getElementById('road');
@@ -84,7 +92,7 @@ function complete()
             }
             if(item_y1>=80){
                 item_y1=-20;
-                item.style.left=(Math.floor(Math.random()*20)+40) + '%';
+                item.style.left= getRandomInt(40,60);
             }
             item_y1+=a/2;
             item.style.top=item_y1+'%';
@@ -99,7 +107,7 @@ function complete()
             }
             if(item_y01>=80){
                 item_y01=-20;
-                item.style.left=(Math.floor(Math.random()*20)+40) + '%';
+                item.style.left= getRandomInt(40,60);
             }
             item_y01+=a/2;
             item.style.top=item_y01+'%';
@@ -115,7 +123,7 @@ function complete()
             }
             if(item_y02>=80){
                 item_y02=-20;
-                item.style.left=(Math.floor(Math.random()*20)+40) + '%';
+                item.style.left= getRandomInt(40,60);
             }
             item_y02+=a/2;
             item.style.top=item_y02+'%';  
@@ -125,7 +133,6 @@ function complete()
     function startgame()
     {
         let user=document.querySelector('.user');
-        let road=rd.getBoundingClientRect();
         move_objects();
 
         document.onkeydown = function(e) {
@@ -158,7 +165,7 @@ function complete()
         }
         user.style.left=player.x + '%';
         user.style.top=player.y+'%';
-        if(collide == false)
+        if(collide === false)
         {
             window.requestAnimationFrame(startgame);
         }
@@ -203,21 +210,21 @@ function complete()
         var other=document.createElement("div");
         other.setAttribute("class","other");
         other.style.top=0;
-        other.style.left=(Math.floor(Math.random()*20)+40)+'%';
+        other.style.left= getRandomInt(40,60);
         rd.appendChild(other);
         
         var other1=document.createElement("div");
         other1.setAttribute("class","other1");
         other1.style.top=0;
-        other1.style.left=(Math.floor(Math.random()*20)+40)+'%';
+        other1.style.left= getRandomInt(40,60);
         rd.appendChild(other1);
 
         var other2=document.createElement("div");
         other2.setAttribute("class","other2");
         other2.style.top=0;
-        other2.style.left=(Math.floor(Math.random()*20)+40)+'%';
+        other2.style.left= getRandomInt(40,60);
         rd.appendChild(other2);
-        if(collide==false)
+        if(collide===false)
         {
             window.requestAnimationFrame(startgame);
         }   
